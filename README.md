@@ -6,7 +6,7 @@
   </a>
   <span> &emsp; ~ ~ ~ &emsp; </span>
   <a href="https://murilloves.github.io/abercrombie&fitch/exercise-1/SpecRunner.html" target="_blank">
-    tests for exercise 1
+    tests for exercise 1 (Jasmine)
   </a>
 </p>
 <p align="center" margin-top="1rem">
