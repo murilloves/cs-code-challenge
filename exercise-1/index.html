@@ -15,8 +15,17 @@
     <style>
       body {
         font-family: system-ui;
+        background: #ff6e7f;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(113deg, #bfe9ff, #ff6e7f);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(113deg, #bfe9ff, #ff6e7f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        background: #9796f0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(113deg, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(113deg, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
       }
       ul {
+        display: flex;
+        flex-wrap: wrap;
         padding: 0;
         margin: auto;
       }
@@ -26,35 +35,62 @@
         width: fit-content;
       }
       li .card {
-        border: 1px solid #d1d3dd;
         border-radius: 0.5rem;
         margin: 1rem auto;
         display: flex;
-        width: 375px;
-        color: #555555;
+        flex: 1;
+        min-width: 20rem;
+        background-color: #fafafe;
+        color: #253746DD;
+        opacity: 0.94;
+        transition: box-shadow .3s, opacity .15s;
+      }
+      li .card:hover {
+        opacity: 1;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
       li .card img {
-        width: 7rem;
-        border-radius: 8px;
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        border-radius: 100rem;
+        filter: opacity(0.85);
+        transition: filter .15s;
       }
-      li .card p {
-        margin: 0.875rem 1rem;
+      li .card:hover img {
+        filter: opacity(1);
+      }
+      li .card .contact-name p {
+        margin: 1.25rem 0 0;
+        font-weight: 500;
       }
       button.show-more {
+        margin-top: 1.72rem;
         background-color: transparent;
-        border-color: transparent;
+        padding: .2rem .4rem;
+        border-radius: .5rem;
         cursor: pointer;
         height: max-content;
-        transform: rotate(180deg);
         margin-right: 1rem;
+        border: 1px solid #f5f5fa;
+        background-color: #fff;
+        color: #666979;
+        font-size: 0.75rem;
+        transition: .15s;
+      }
+      button.show-more:hover {
+        color: #126bf1;
       }
       button.show-more.opened {
-        transform: rotate(0);
+        background-color: #fff;
+        display: none;
       }
 
       .details {
+        font-size: 0.75rem;
         opacity: 0;
         transition: 0.3s;
+        height: 0;
       }
       .details.show {
         opacity: 1;
@@ -83,15 +119,15 @@
             <div class="card">
               <img src="{{ this.avatar }}" />
               <div class="w-100">
-                <div class="flex w-100 items-center justify-between">
+                <div class="contact-name flex w-100 items-center justify-between">
                   <p>{{ this.name }}</p>
-                  <button
-                    id="{{this.id}}"
-                    onclick="toggleShowMore(this.id)"
-                    class="show-more {{#if this.showMore}} opened {{/if}}">
-                    &#94;
-                  </button>
                 </div>
+                <button
+                  id="{{this.id}}"
+                  onclick="toggleShowMore(this.id)"
+                  class="show-more {{#if this.showMore}} opened {{/if}}">
+                  more...
+                </button>
                 <div class="details {{#if this.showMore}} show {{/if}}">
                   <p>ID: {{ this.id }}</p>
                   <p>Registered at: {{ formatDate this.createdAt }}</p>
