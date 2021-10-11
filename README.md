@@ -1,3 +1,20 @@
+<img width="1440" alt="Screen Shot 2021-10-11 at 18 31 08" src="https://user-images.githubusercontent.com/8443714/136858741-b2863d6c-1b72-47da-ba35-790707e8067f.png">
+
+<p align="center">
+  <a href="https://murilloves.github.io" target="_blank">
+    Click HERE to check Exercise 1
+  </a>
+  <a href="https://murilloves.github.io" target="_blank">
+    Click HERE to run TESTS for Exercise 1
+  </a>
+</p>
+<p>
+  <a href="https://murilloves.github.io" target="_blank">
+    Click HERE to test Exercise 2
+  </a>
+</p>
+
+
 # Abercrombie Client-Side Developer Skill Assessment
 1. Clone this repository.
 2. Complete exercises below by creating/modifying code in their respective folders. You can architect the project how you like re: folder structure, how you name your files, etc. Use your best judgement as a developer.
