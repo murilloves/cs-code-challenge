@@ -6,12 +6,12 @@
   </a>
   <span> &emsp; ~ ~ ~ &emsp; </span>
   <a href="https://murilloves.github.io/abercrombie&fitch/exercise-1/SpecRunner.html" target="_blank">
-    TESTS for ex. 1
+    tests for exercise 1
   </a>
 </p>
 <p align="center" margin-top="1rem">
   <a href="https://murilloves.github.io/abercrombie&fitch/exercise-2/" target="_blank">
-    LIVE ex. 2
+    exercise 2
   </a>
 </p>
 
