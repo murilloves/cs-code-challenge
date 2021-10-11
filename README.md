@@ -1,16 +1,16 @@
 <img width="1440" alt="Screen Shot 2021-10-11 at 18 31 08" src="https://user-images.githubusercontent.com/8443714/136858741-b2863d6c-1b72-47da-ba35-790707e8067f.png">
 
 <p align="center">
-  <a href="https://murilloves.github.io" target="_blank">
-    LIVE ex. 1
+  <a href="https://murilloves.github.io/abercrombie&fitch/exercise-1/" target="_blank">
+    exercise 1
   </a>
   <span> &emsp; ~ ~ ~ &emsp; </span>
-  <a href="https://murilloves.github.io" target="_blank">
+  <a href="https://murilloves.github.io/abercrombie&fitch/exercise-1/SpecRunner.html" target="_blank">
     TESTS for ex. 1
   </a>
 </p>
 <p align="center" margin-top="1rem">
-  <a href="https://murilloves.github.io" target="_blank">
+  <a href="https://murilloves.github.io/abercrombie&fitch/exercise-2/" target="_blank">
     LIVE ex. 2
   </a>
 </p>
