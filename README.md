@@ -2,15 +2,16 @@
 
 <p align="center">
   <a href="https://murilloves.github.io" target="_blank">
-    Click HERE to check Exercise 1
+    LIVE ex. 1
   </a>
+  <span> &emsp; ~ ~ ~ &emsp; </span>
   <a href="https://murilloves.github.io" target="_blank">
-    Click HERE to run TESTS for Exercise 1
+    TESTS for ex. 1
   </a>
 </p>
-<p>
+<p align="center" margin-top="1rem">
   <a href="https://murilloves.github.io" target="_blank">
-    Click HERE to test Exercise 2
+    LIVE ex. 2
   </a>
 </p>
 
