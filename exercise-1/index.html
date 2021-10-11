@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>RESTful API data</title>
+
+    <meta name="description" content="Consuming RESTful API data">
+    <meta name="author" content="MurilloSilva">
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="src/scripts.js"></script>
+
+    <style>
+      body {
+        font-family: system-ui;
+      }
+      ul {
+        padding: 0;
+        margin: auto;
+      }
+      li {
+        list-style: none;
+        margin: auto;
+        width: fit-content;
+      }
+      li .card {
+        border: 1px solid #d1d3dd;
+        border-radius: 0.5rem;
+        margin: 1rem auto;
+        display: flex;
+        width: 375px;
+        color: #555555;
+      }
+      li .card img {
+        width: 7rem;
+        border-radius: 8px;
+      }
+      li .card p {
+        margin: 0.875rem 1rem;
+      }
+      button.show-more {
+        background-color: transparent;
+        border-color: transparent;
+        cursor: pointer;
+        height: max-content;
+        transform: rotate(180deg);
+        margin-right: 1rem;
+      }
+      button.show-more.opened {
+        transform: rotate(0);
+      }
+
+      .details {
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .details.show {
+        opacity: 1;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .w-100 {
+        width: 100%;
+      }
+    </style>
+
+  </head>
+  <body>
+    <script type="text/x-handlebars-template" id="template">
+      <ul>
+        {{#each list}}
+          <li>
+            <div class="card">
+              <img src="{{ this.avatar }}" />
+              <div class="w-100">
+                <div class="flex w-100 items-center justify-between">
+                  <p>{{ this.name }}</p>
+                  <button
+                    id="{{this.id}}"
+                    onclick="toggleShowMore(this.id)"
+                    class="show-more {{#if this.showMore}} opened {{/if}}">
+                    &#94;
+                  </button>
+                </div>
+                <div class="details {{#if this.showMore}} show {{/if}}">
+                  <p>ID: {{ this.id }}</p>
+                  <p>Registered at: {{ formatDate this.createdAt }}</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul> 
+    </script>
+
+    <div id="output" />
+
+  </body>
+</html>
